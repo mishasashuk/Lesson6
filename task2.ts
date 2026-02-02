@@ -26,3 +26,17 @@ const user4: User = {
   name: "Vlad",
   age: () => 23,
 };
+
+// const compareObjects = (object1: User, object2: User) => {
+//   for (const key1 in object1) {
+//     for (const key2 in object2) {
+//       const objectKey1: string = object2[key1];
+//       const objectKey2: string = object1[key2];
+//       if (objectKey1 === objectKey2) {
+//         continue;
+//       }
+//       return false;
+//     }
+//   }
+//   return true;
+// };
