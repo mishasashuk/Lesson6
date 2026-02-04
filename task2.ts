@@ -27,16 +27,14 @@ const user4: User = {
   age: () => 23,
 };
 
-// const compareObjects = (object1: User, object2: User) => {
-//   for (const key1 in object1) {
-//     for (const key2 in object2) {
-//       const objectKey1: string = object2[key1];
-//       const objectKey2: string = object1[key2];
-//       if (objectKey1 === objectKey2) {
-//         continue;
-//       }
-//       return false;
-//     }
-//   }
-//   return true;
-// };
+const compareObjects = (object1: User, object2: User) => {
+  for (const key1 in object1) {
+    if (object1[key1 as keyof User] !== object2[key1 as keyof User]) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+console.log(compareObjects(user1, user2));
